@@ -1,6 +1,6 @@
-package com.mheisters.pizzafactory.domain.entity;
+package com.mheisters.pizzafactory.pizzastore.domain.entity;
 
-import com.mheisters.pizzafactory.annotation.processor.Factory;
+import com.mheisters.pizzafactory.annotations.Factory;
 
 @Factory(
         id = "Tiramisu",

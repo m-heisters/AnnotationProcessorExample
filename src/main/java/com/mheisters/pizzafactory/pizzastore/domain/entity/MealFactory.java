@@ -1,4 +1,4 @@
-package com.mheisters.pizzafactory.domain.entity;
+package com.mheisters.pizzafactory.pizzastore.domain.entity;
 
 public class MealFactory {
 

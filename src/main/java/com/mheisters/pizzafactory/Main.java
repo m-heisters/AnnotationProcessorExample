@@ -1,8 +1,8 @@
 package com.mheisters.pizzafactory;
 
 
-import com.mheisters.pizzafactory.domain.entity.Meal;
-import com.mheisters.pizzafactory.domain.service.PizzaStore;
+import com.mheisters.pizzafactory.pizzastore.domain.entity.Meal;
+import com.mheisters.pizzafactory.pizzastore.domain.service.PizzaStore;
 
 public class Main {
     static void main() {

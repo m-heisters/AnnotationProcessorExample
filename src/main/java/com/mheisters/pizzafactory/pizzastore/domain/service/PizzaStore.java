@@ -1,6 +1,6 @@
-package com.mheisters.pizzafactory.domain.service;
+package com.mheisters.pizzafactory.pizzastore.domain.service;
 
-import com.mheisters.pizzafactory.domain.entity.*;
+import com.mheisters.pizzafactory.pizzastore.domain.entity.*;
 
 public class PizzaStore {
     MealFactory factory = new MealFactory();
