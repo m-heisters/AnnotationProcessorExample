@@ -29,7 +29,7 @@ public class FactoryProcessor extends AbstractProcessor {
         typeUtils = processingEnv.getTypeUtils();
         elementUtils = processingEnv.getElementUtils();
         filer = processingEnv.getFiler();
-        //  messager = processingEnv.getMessager();
+        messager = processingEnv.getMessager();
     }
 
     @Override

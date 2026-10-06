@@ -27,7 +27,7 @@ public class FactoryGroupedClasses {
     }
 
     public void add(FactoryAnnotatedClass toInsert) throws IdAlreadyInUseException {
-        FactoryAnnotatedClass existing = itemsMap.get(toInsert);
+        FactoryAnnotatedClass existing = itemsMap.get(toInsert.getId());
 
         if (existing != null) {
             throw new IdAlreadyInUseException(existing);
