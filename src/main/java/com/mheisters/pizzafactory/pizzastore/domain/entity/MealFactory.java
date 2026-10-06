@@ -7,18 +7,12 @@ public class MealFactory {
             throw new IllegalArgumentException("id is null");
         }
 
-        if ("Margherita".equals(id)) {
-            return new MargharitaPizza();
-        }
+        return switch (id) {
+            case "Margherita" -> new MargharitaPizza();
+            case "Calzone" -> new CalzonePizza();
+            case "Tiramisu" -> new Tiramisu();
+            default -> throw new IllegalArgumentException("Unknown id for meal");
+        };
 
-        if ("Calzone".equals(id)) {
-            return new CalzonePizza();
-        }
-
-        if ("Tiramisu".equals(id)) {
-            return new Tiramisu();
-        }
-
-        throw new IllegalArgumentException("Unknown id for meal");
     }
 }

@@ -8,22 +8,22 @@ import javax.lang.model.type.MirroredTypeException;
 
 public class FactoryAnnotatedClass {
 
-    private TypeElement annotatedClassElement;
+    private final TypeElement annotatedClassElement;
     private String qualifiedSuperClassName;
     private String simpleTypeName;
-    private String id;
+    private final String id;
 
     public FactoryAnnotatedClass(TypeElement annotatedClassElement) {
         this.annotatedClassElement = annotatedClassElement;
         Factory annotation = annotatedClassElement.getAnnotation(Factory.class);
-        id = annotation.id();
 
-        if (StringUtils.isEmpty(id)) {
+        if (annotation == null || StringUtils.isEmpty(annotation.id())) {
             throw new IllegalArgumentException(
                     String.format("id() in @%s for class %s is null or empty.",
                             Factory.class.getSimpleName(),
                             annotatedClassElement.getQualifiedName()));
         }
+        id = annotation.id();
 
 // Get fully qualified type
         try {
