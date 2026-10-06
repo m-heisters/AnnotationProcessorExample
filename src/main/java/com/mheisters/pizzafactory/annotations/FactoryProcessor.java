@@ -21,7 +21,7 @@ public class FactoryProcessor extends AbstractProcessor {
     private Elements elementUtils;
     private Filer filer;
     private Messager messager;
-    private Map<String, FactoryGroupedClasses> factoryClasses = new LinkedHashMap<>();
+    private final Map<String, FactoryGroupedClasses> factoryClasses = new LinkedHashMap<>();
 
     @Override
     public synchronized void init(ProcessingEnvironment processingEnv) {

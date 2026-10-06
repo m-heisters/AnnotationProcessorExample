@@ -10,7 +10,6 @@ import javax.annotation.processing.Filer;
 import javax.lang.model.element.Modifier;
 import javax.lang.model.element.TypeElement;
 import javax.lang.model.util.Elements;
-import javax.tools.JavaFileObject;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -19,9 +18,9 @@ public class FactoryGroupedClasses {
 
     private static final String SUFFIX = "Factory";
 
-    private String qualifiedClassName;
+    private final String qualifiedClassName;
 
-    private Map<String, FactoryAnnotatedClass> itemsMap = new LinkedHashMap<>();
+    private final Map<String, FactoryAnnotatedClass> itemsMap = new LinkedHashMap<>();
 
     public FactoryGroupedClasses(String qualifiedClassName) {
         this.qualifiedClassName = qualifiedClassName;
